@@ -1,0 +1,37 @@
+# 1. New Item
+# 2. Item name: If statement
+# 3. Select Pipeline
+# 4. OK
+# 5. Paste the below code:
+
+pipeline{
+agent any
+parameters {
+booleanParam(defaultValue: false, description: "Enable Service?", name: "myBoolean")
+}
+stage {
+stage("Demo"){
+steps {
+script {
+if (params.myBoolean == false){
+	currentBuild.result = “SUCCESS”
+	return 
+}
+else {
+echo "booleanParam is set to: TRUE"
+}
+}
+}
+}
+}
+
+# 6. Save
+# 7. Build Now
+# 8. Back to dashboard
+# 9. If Statement
+# 10. Status > Logs
+# 11. Build with parameters
+# 12. Enable “myBoolean”
+# 13. Build
+# 14. It will show:
+# ‘Boolean parameter is set to: True’

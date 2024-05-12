@@ -1,0 +1,26 @@
+# 1. New Item
+# 2. Item Name: My Function
+# 3. Select Pipeline
+# 4. OK
+# 5. Definition > Pipeline > Pipeline Script
+# 6. Paste the below script:
+
+pipeline {
+agent any
+stages {
+stage ("Demo") {
+steps {
+myFunc("Hello from the demo stage!")
+}
+}
+}
+}
+
+def myFunc(string myText) { 
+echo "myText is set to: ${myText} "
+}
+
+# 7. Save
+# 8. Build Now
+# 9. Satus > Logs >
+# myText is set to: Hello from the demo stage.

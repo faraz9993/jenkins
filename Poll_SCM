@@ -1,0 +1,9 @@
+# How to setup Poll SCM:
+
+# 1. Go to GitHub Pipeline
+# 2. Configure
+# 3. Build Triggers
+# 4. Select Poll SCM
+H/2 * * * * (Same as we do in Cron Job Scheduling)
+# 5. Save
+# 6. Now, after every 2 minutes, the job will run.

@@ -1,0 +1,33 @@
+# Challenge:
+# 1. Create a new pipeline called ‘Challenge 3’
+# 2. Add 3 parameters
+# 3. Get input for our custom deployment name
+# 4. Select which AZ to deploy to: EU-WEST-2A, EU-WEST-2B, EU-WEST-2C
+# 5. Checkbox to confrim deployment
+
+# 1. New Item
+# 2. Item Name
+# 3. Challenge 3
+# 4. Pipeline > Pipeline Script
+# 5. Paste the below code
+
+pipeline{
+agent any
+parameters {
+string(defaultValue: "", description: "Deployment Name?", name: "deploymentName")
+choice(choices: ["EU-WEST-2A", "EU-WEST-2B", "EU-WEST-2C"], description: "Which environment to deploy in?", name: "deployENV")
+booleanParam(defaultValue: False, description: "Confirm Deployment?", name: "Confirm Deploy")
+}
+stages {
+stage("Deploy"){
+steps {
+echo "String is set to ${deploymentName} \n"
+echo "Choice is set to ${azDeploy} \n"
+echo "bool set to ${confirmDeploy} \n"
+}
+}
+}
+}
+
+# 6. Save
+# 7. Build Now

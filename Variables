@@ -1,0 +1,27 @@
+# Defining variables:
+# 1. New Item
+# 2. Item Name: Variable Pipeline
+# 3. OK
+# 4. Pipeline > Definition > Pipeline Script
+
+pipeline {
+agent any
+environment {
+def myString = "Hello World"
+def myNumber = 10
+def myBool = true
+}
+stages {
+stage("Demo") {
+steps {
+echo "myString: ${myString}"
+echo "myNumber: ${myNUmber}"
+echo "myBool: ${myBool}"
+}
+}
+}
+}
+
+# 5. Save
+# 6. Build Now
+# 7. Status > Logs 

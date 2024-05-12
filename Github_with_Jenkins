@@ -1,0 +1,13 @@
+#How to setup GitHub with Jenkins:
+
+1. New Item
+2. Item Name: GitHub Pipeline
+3. Select Pipeline
+4. OK
+5. Pipeline Script from SCM (Source Code Management)
+6. SCM: Git
+7. Repository URL: https://github.com/faraz9993/Jenkins-Github.git
+8. Branch specifier: */main
+9. jenkins/Jenkinsfile
+10. Save
+12. Build Now

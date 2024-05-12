@@ -1,0 +1,32 @@
+# Boolean Parameters:
+# 1. New Item
+# 2. Item Name: boolPipeline
+# 3. Pipeline
+# 4. OK
+# 5. Pipeline > Pipeline Script
+# 6. Paste the below code:
+
+
+pipeline{
+agent any
+parameters {
+booleanParam(defaultValue: false, description: "Enable Service?", name: "myBoolean")
+}
+stage {
+stage("Demo"){
+steps {
+echo "booleanParam is set to: ${params.myBoolean}"
+}
+}
+}
+}
+
+# 7. Save
+# 8. Build Now
+# 9. Status
+# 10. Logs
+# 11. Build with parameters
+# 12. Enable “myBoolean”
+# 13. Build
+# 14. Staus
+# 15. Logs

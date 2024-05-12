@@ -1,0 +1,30 @@
+# 1. New Item
+# 2. Item Name: String Pipeline
+# 3. OK
+# 4. Pipeline > Pipeline script
+# 5. Paste the below code:
+
+
+pipeline{
+agent any
+parameters {
+string(defaultValue: "Test", description: "Which environment to deploy in?", name: "deployENV")
+}
+stages {
+stage("Demo"){
+steps {
+echo "string is set to: ${params.deployENV}"
+}
+}
+}
+}
+
+# 6. Save
+# 7. Build Now
+# 8. Status > Logs
+# 9. Back to dashboard
+# 10. String Pipeline
+# 11. Build With Parameters
+# 12. deployENV > PROD
+# 13. Build
+# 14. Status > Logs

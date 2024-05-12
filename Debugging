@@ -1,0 +1,31 @@
+pipeline {
+agent any
+stages {
+stage ("Clean up"){
+steps {
+deleteDIR
+}
+}
+stage("Clone Repo") {
+steps {
+sh "https://github.com/faraz9993/Jenkins-Github.git"
+}
+}
+stage("Build"){
+steps {
+dir("simple-java-maven-app") {
+sh "mvn clean install"
+sleep(10)
+}
+}
+}
+stage("Test"){
+steps {
+dir("Simple Java Maven App")
+sh "mvn test"
+}
+}
+}
+}
+
+# Sleep(10) will make it wait for 10 seconds. If you want that it would wait for 5 minutes, you would write,

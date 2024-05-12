@@ -1,0 +1,13 @@
+# 1. New Item
+# 2. Item Name: Multi Branch
+# 3. Select Multibranch Pipeline
+# 4. Branch source > Add source > Git
+# 5. Project Repository: https://github.com/faraz9993/Jenkins-Github.git
+# 6. Build Configuration > Mode > By Jenkinsfile
+# 7. Script Path: jenkins/Jenkinsfile
+# 8. Enable “Periodically if not otherwise run”
+# 9. Interval > 2 Minutes
+# 10. Save
+# 11. Scanning will start automatically
+# 12. Finished: Success
+# 13. Status > Developer > Logs

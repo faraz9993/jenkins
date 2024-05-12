@@ -1,0 +1,16 @@
+# 1. Click on New Item
+# 2. Item name: My First Job
+# 3. Here, you will find a few options.
+
+
+echo "Hello From Challenge 1"
+
+
+# 4. Select Freestyle project
+# 5. OK
+# 6. Go to Build Steps
+# 7. Add Build step > Execute Shell
+# 8. write > echo "Hello World!"
+# 9. Save
+# 10. Click on Build Now
+# 11. Click on #1

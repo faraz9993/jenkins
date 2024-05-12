@@ -1,0 +1,41 @@
+# Challenge:
+# 1. Create a pipelinne called Challenge 2
+# 2. Create a simple pipeline script with 5 stages.
+# 3. Each one numbered i.e. “Stage 1”, “Stage 2”, etc
+# 4. A simple echo “This is stage X” for each stage
+# 5. Run it and check if it works
+
+#Solution:
+# 1. New Item
+# 2. Item name: Challenge 2
+# 3. Pipeline
+# 4. OK
+# 5. Pipeline description > Pipeline Script >
+pipeline {
+agent any
+stages {
+stage ("Stage 1"){
+steps {
+echo "This is stage 1"
+}
+}
+stage ("Stage 2"){
+steps {
+echo "This is stage 2"
+}
+}
+stage ("Stage 3"){
+steps {
+echo "This is stage 3"
+}
+}
+stage ("Stage 4"){
+steps {
+echo "This is stage 4"
+}
+}
+}
+}
+# 6. Save
+# 7. Build Now
+# 8. Status > Stage View > Logs
